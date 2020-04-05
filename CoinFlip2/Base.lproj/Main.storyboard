@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="it2-ri-gSB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="UQQ-1l-iFO">
+            <objects>
+                <viewController id="it2-ri-gSB" customClass="ViewController" customModule="CoinFlip2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="duY-UY-p5L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="hl4-sc-HOf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01V-Jm-TGQ">
+                                        <rect key="frame" x="148.5" y="0.0" width="117" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="2WY-4S-QgZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8gM-4J-o1w">
+                                        <rect key="frame" x="33.5" y="104" width="347" height="610"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="347" id="GmP-HX-9CK"/>
+                                            <constraint firstAttribute="height" constant="384" id="JLo-pf-sPl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Screen to Flip Coin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gi-jo-HTL">
+                                        <rect key="frame" x="119" y="755" width="176" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="oNO-ep-CnX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="I4s-BL-feX" firstAttribute="trailing" secondItem="hl4-sc-HOf" secondAttribute="trailing" id="Tta-s8-n3b"/>
+                            <constraint firstItem="I4s-BL-feX" firstAttribute="bottom" secondItem="hl4-sc-HOf" secondAttribute="bottom" id="eK8-56-l84"/>
+                            <constraint firstItem="hl4-sc-HOf" firstAttribute="leading" secondItem="I4s-BL-feX" secondAttribute="leading" id="hhU-zF-bfg"/>
+                            <constraint firstItem="hl4-sc-HOf" firstAttribute="top" secondItem="I4s-BL-feX" secondAttribute="top" id="iWg-SX-0ie"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I4s-BL-feX"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LlU-nT-tPx" appends="YES" id="MKk-7Y-QQd"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="coinImage" destination="8gM-4J-o1w" id="1hp-Nf-kVN"/>
+                        <outlet property="resultsLabel" destination="01V-Jm-TGQ" id="41h-Ss-8d4"/>
+                        <outlet property="tapScreenLabel" destination="4gi-jo-HTL" id="KJw-Ge-FrM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXM-sg-QWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LlU-nT-tPx">
+                    <connections>
+                        <action selector="tapGestureRecognized:" destination="it2-ri-gSB" id="RA5-Ww-Leh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="122.54464285714285"/>
+        </scene>
+    </scenes>
+</document>

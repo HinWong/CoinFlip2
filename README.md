@@ -1,4 +1,0 @@
-# CoinFlip
-# CoinFlip
-# CoinFlip
-# CoinFlip
